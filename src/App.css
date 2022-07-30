@@ -1,38 +1,54 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Dosis', sans-serif;
+  
+}
+h1 {
+  color: #556c6c;
+  margin-bottom: 30px;
+  font-size: 30px;
+  letter-spacing: 3px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board {
+  
+  width: 400px;
+  height: 400px;
+  background-color:rgb(157, 201, 202);
+  outline: 2px solid white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  flex: 33.33%;
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square {
+  flex: 33.33%;
+  height: 100%;
+  outline: 1px solid white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #556c6c;
+  font-family: 'Dosis', sans-serif;
+}
+
+.square:active {
+  background-color:#8ba8a9;
 }
